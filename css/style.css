@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+
+/* General CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --headingColor: #fffffe;
+  --textColor: #94a1b2;
+  --buttonColor: #7f5af0;
+  --buttonTextColor: #fffffe;
+  --backgroundColor: #16161a;
+  --backgroundSecondary: #242629;
+  --backgroundTertiary: hsl(216, 2%, 10%);
+  --secondaryLighter: hsl(216, 2%, 30%);
+  --correctColor: #00ebc7;
+  --wrongColor: #ff5470;
+  --font: "Nunito", sans-serif;
+  --transition: all 0.3s linear;
+  --radius: 0.8rem;
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --footerHeight: 80px;
+}
+
+body {
+  background-color: var(--backgroundColor);
+  font-family: var(--font);
+  letter-spacing: 0.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--headingColor);
+  text-align: center;
+}
+
+p {
+  color: var(--textColor);
+  text-align: center;
+  letter-spacing: 0.125rem;
+}
+
+.main-container {
+  max-width: 600px;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.underline {
+  width: 16rem;
+  height: 0.25rem;
+  background: var(--buttonColor);
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+.hero {
+  width: 90vw;
+  margin: 0 auto;
+  min-height: calc(100vh - var(--footerHeight));
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: grid;
+  place-items: center;
+}
+
+.footer {
+  height: var(--footerHeight);
+  background-color: #111;
+  display: grid;
+  place-items: center;
+}
+
+/* Application's CSS goes here */
+
+.app-container {
+  margin-top: 1rem;
+  background: var(--backgroundSecondary);
+  border-radius: var(--radius);
+}
+
+.tab-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.tab {
+  border: none;
+  padding: 1rem;
+  background: var(--backgroundTertiary);
+  color: var(--headingColor);
+  font-weight: bold;
+  letter-spacing: 0.125rem;
+  cursor: pointer;
+  color: var(--textColor);
+  transition: var(--transition);
+}
+
+.tab:hover {
+  color: var(--headingColor);
+}
+
+.tab-current {
+  background: var(--backgroundSecondary);
+}
+
+.tab-todo {
+  border-top-left-radius: var(--radius);
+}
+
+.tab-completed {
+  border-top-right-radius: var(--radius);
+}
+
+/* todo container */
+
+.todo-container {
+  display: grid;
+  row-gap: 1rem;
+  padding: 1rem;
+}
+
+.todo-task {
+  background: var(--secondaryLighter);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  box-shadow: var(--shadow-xl);
+  border-radius: var(--radius);
+}
+
+.todo-title {
+  color: var(--headingColor);
+}
+
+.todo-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1rem;
+}
+
+/* completed container */
+
+.completed-container {
+  display: grid;
+  row-gap: 1rem;
+  padding: 1rem;
+}
+
+.completed-task {
+  background: var(--secondaryLighter);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  box-shadow: var(--shadow-xl);
+  border-radius: var(--radius);
+}
+
+.completed-title {
+  color: var(--headingColor);
+}
+
+.completed-buttons {
+  display: grid;
+}
+
+/* text */
+
+.todo-text span,
+.completed-text span {
+  color: var(--headingColor);
+}
+
+/* icon buttons */
+
+.icon-btn {
+  background: none;
+  border: none;
+  display: grid;
+  place-items: center;
+  background: var(--buttonColor);
+  height: 1.75rem;
+  width: 1.75rem;
+  color: var(--buttonTextColor);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.icon-btn:hover {
+  transform: scale(1.2);
+  box-shadow: var(--shadow-md);
+}
+
+.form {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.task-input {
+  border-radius: var(--radius);
+  margin-right: 0.25rem;
+  border: none;
+  text-align: center;
+  height: 2rem;
+}
+
+.task-input:focus {
+  outline: none;
+}
+
+.btn {
+  margin-left: 0.25rem;
+  padding: 0.5rem 1rem;
+  height: 2rem;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--secondaryLighter);
+  color: var(--buttonTextColor);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.form-text {
+  margin-top: 1rem;
+  visibility: none;
+  color: var(--correctColor);
+}
+
+.dailies-text {
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+.btn-clear {
+  background: none;
+  border: none;
+  color: var(--wrongColor);
+  cursor: pointer;
+  margin-top: 1rem;
+  text-align: center;
+}

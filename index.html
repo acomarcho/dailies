@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="./fontawesome-free-5.15.3-web/css/all.min.css"
+    />
+    <title>Dailies</title>
+  </head>
+  <body>
+    <main class="hero">
+      <div class="main-container">
+        <h2>dailies</h2>
+        <div class="underline"></div>
+        <div class="app-container">
+          <div class="tab-container">
+            <button class="tab tab-todo tab-current">To-do</button>
+            <button class="tab tab-completed">Completed</button>
+          </div>
+          <div class="content">
+            <div class="todo-container">
+              <p class="todo-text">
+                You have <span>no to-do(s)</span> available.
+              </p>
+            </div>
+            <div class="completed-container">
+              <p class="completed-text">
+                You have <span>no completed task(s)</span>.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="underline"></div>
+        <form class="form">
+          <input type="text" class="task-input" placeholder="e.g. study" />
+          <button type="submit" class="btn btn-submit">Add task</button>
+        </form>
+        <p class="btn-clear">Clear completed tasks</p>
+        <p class="form-text"></p>
+      </div>
+    </main>
+    <footer class="footer">
+      <p>Made with <i class="fas fa-heart"></i>, Marchotridyo</p>
+    </footer>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
